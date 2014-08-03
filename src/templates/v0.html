@@ -1,0 +1,24 @@
+{% load static %}
+{% verbatim %}
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>Angular.js</title>
+</head>
+<body>
+    <div class="container">
+1 euro is worth <span id='out'></span> dollars
+{% endverbatim %}
+
+    </div>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/appv0.js' %}"></script>
+</body>
+</html>
