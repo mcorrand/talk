@@ -18,6 +18,9 @@
             <label>to</label>
             <select ng-model='to' ng-options='currency.name for currency in currencies'></select>
             <input ng-model="in" talk-float> {{from.name}} is worth {{out}} {{to.name}}
+            <br/>
+            <a href="https://github.com/mcorrand/talk/commit/3ad4df02387fd76f700e55b8dc8328db5f57e070">diff</a>
+            <a href="https://github.com/mcorrand/talk/blob/master/src/static/js/directives.js">directives.js</a>
         </div>
         {% endverbatim %}
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
