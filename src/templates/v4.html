@@ -2,29 +2,29 @@
 {% verbatim %}
 <!DOCTYPE html>
 <html ng-app='appv4' lang=en>
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <title>Angular.js</title>
-</head>
-<body>
-    <div class="container" ng-controller='appv4controller'>
-        <label>from </label>
-        <select ng-model='from' ng-options='currency.name for currency in currencies'></select>
-        <label>to</label>
-        <select ng-model='to' ng-options='currency.name for currency in currencies'></select>
-        <input ng-model="in" talk-float> {{from.name}} is worth {{out}} {{to.name}}
-    </div>
-    {% endverbatim %}
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.js"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular-route.js"></script>
-    <script type="text/javascript" src="{% static 'js/directives.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/appv4.js' %}"></script>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <title>Angular.js</title>
+    </head>
+    <body>
+        <div class="container" ng-controller='appv4controller'>
+            <label>from </label>
+            <select ng-model='from' ng-options='currency.name for currency in currencies'></select>
+            <label>to</label>
+            <select ng-model='to' ng-options='currency.name for currency in currencies'></select>
+            <input ng-model="in" talk-float> {{from.name}} is worth {{out}} {{to.name}}
+        </div>
+        {% endverbatim %}
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular-route.js"></script>
+        <script type="text/javascript" src="{% static 'js/directives.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/appv4.js' %}"></script>
+    </body>
 </html>

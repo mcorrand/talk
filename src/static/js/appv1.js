@@ -3,5 +3,4 @@ angular.module('appv1', [])
         $http.jsonp('http://rate-exchange.appspot.com/currency?from=EUR&to=USD&callback=JSON_CALLBACK').success(function(data){
             $scope.rate = data.rate;
         });
-
     });

@@ -6,5 +6,4 @@ angular.module('appv2', [])
         $scope.$watch('euros', function(value){
         	$scope.dollars = parseFloat(value) * $scope.rate;
         });
-
     });

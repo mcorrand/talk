@@ -18,5 +18,4 @@ angular.module('appv4', ['appv4.directives'])
         $scope.$watchGroup(['in', 'rate'], function(group){
         	$scope.out = parseFloat(group[0]) * group[1];
         });
-
     });
