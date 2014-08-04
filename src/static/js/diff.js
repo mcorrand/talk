@@ -1,11 +1,6 @@
-$.ajax({
-    url: "http://rate-exchange.appspot.com/currency?from=EUR&to=USD",
-    jsonp: "callback",
-    dataType: "jsonp",
-    data: {
-        format: "json"
-    },
-    success: function( response ) {
-        $('#out').html(response.rate);        
-    }
-});
+angular.module('appv1', [])
+    .controller('appv1controller', function($scope, $http) {
+        $http.jsonp('http://rate-exchange.appspot.com/currency?from=EUR&to=USD&callback=JSON_CALLBACK').success(function(data){
+            $scope.rate = data.rate;
+        });
+    });
