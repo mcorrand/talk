@@ -1,9 +1,21 @@
-angular.module('appv2', [])
-    .controller('appv2controller', function($scope, $http) {
-        $http.jsonp('http://rate-exchange.appspot.com/currency?from=EUR&to=USD&callback=JSON_CALLBACK').success(function(data){
-            $scope.rate = data.rate;
+angular.module('appv3', [])
+    .controller('appv3controller', function($scope, $http) {
+        var pound = {name: 'sterling pound', acronym: 'GBP', symbol: '£'};
+        var dollar = {name: 'dollar', acronym: 'USD', symbol: '$'};
+        var euro = {name: 'euro', acronym: 'EUR', symbol: '€'};
+        $scope.currencies = [pound, dollar, euro];
+
+        $scope.from = euro;
+        $scope.to = pound;
+        $scope.in = 1;
+
+        $scope.$watchGroup(['from', 'to'], function(group){
+            $http.jsonp('http://rate-exchange.appspot.com/currency?from='+ group[0].acronym + '&to=' + group[1].acronym + '&callback=JSON_CALLBACK').success(function(data){
+                $scope.rate = data.rate;
+            });
         });
-        $scope.$watch('euros', function(value){
-        	$scope.dollars = parseFloat(value) * $scope.rate;
+
+        $scope.$watchGroup(['in', 'rate'], function(group){
+            $scope.out = parseFloat(group[0]) * group[1];
         });
     });
