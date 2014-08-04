@@ -17,7 +17,7 @@
             <select ng-model='from' ng-options='currency.name for currency in currencies'></select>
             <label>to</label>
             <select ng-model='to' ng-options='currency.name for currency in currencies'></select>
-            <input ng-model="in" talk-float> {{from.name}} is worth {{out}} {{to.name}}
+            {{from.symbol}}<input ng-model="in" talk-float> {{from.name}} is worth {{out | currency : to.symbol}} {{to.name}}
         </div>
         {% endverbatim %}
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
